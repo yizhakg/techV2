@@ -2,6 +2,7 @@
 :root {
   --mainBlack: #03071e;
   --mainWhite: #fdfffc;
+  --headerColor:#03071e;
 }
 * {
   margin: 0;
@@ -110,8 +111,15 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
+header >*{
+  color: var(--headerColor);
+}
 header span  {
 font-size: 1.5em;
+color: var(--headerColor);
+}
+header i  {
+color: var(--headerColor);
 }
 header span img {
   height: 90px;
