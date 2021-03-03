@@ -431,17 +431,17 @@ footer p .link:hover::after{
 footer p .link:hover::before {
   color: #2867B2;
   transform: rotate(-17deg);
-animation: upDownLink 1s forwards;
+animation: upDownLink 1s forwards ; 
 }
 @keyframes upDownLink{
   0%{
 top: 0;
   }
   50%{
-    top: -20px;
+    top: -35px;
   }
   100%{
-    top: -4px;
+    top: -23px;
     z-index: 3;
   }
 }
