@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --mainBlack: #03071e;
   --mainWhite: #fdfffc;
-  --headerColor:#03071e;
+  --headerColor: #03071e;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: var(--mainBlack);
   scroll-behavior: smooth;
 }
@@ -111,15 +111,15 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-header >*{
+header > * {
   color: var(--headerColor);
 }
-header span  {
-font-size: 1.5em;
-color: var(--headerColor);
+header span {
+  font-size: 1.5em;
+  color: var(--headerColor);
 }
-header i  {
-color: var(--headerColor);
+header i {
+  color: var(--headerColor);
 }
 header span img {
   height: 90px;
@@ -185,7 +185,8 @@ main {
   width: 40%;
   padding: 20px;
 }
-.container .text p ,.container .text ul {
+.container .text p,
+.container .text ul {
   text-align: justify;
 }
 
@@ -204,8 +205,8 @@ main {
   margin: 0;
 }
 #cont4 ul {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 #cont4 ul h2 {
   text-align: center;
@@ -361,14 +362,17 @@ footer p {
   border-top: 2px solid;
   width: fit-content;
   padding: 10px 0;
+    direction: ltr;
 }
 footer img {
   height: 50px;
   width: auto;
+  z-index: 4;
 }
 footer .social {
   display: flex;
   flex-wrap: wrap;
+  z-index: 4;
 }
 footer .social li {
   list-style: none;
@@ -384,6 +388,63 @@ footer .social li a i {
 .fab.fa-facebook-f:hover {
   color: #4267b2;
 }
+
+footer p .link {
+ position: relative;
+  color: #fff;
+}
+footer p .link::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #03071e;
+  background: #fff;
+  height: 40px;
+  z-index: 1;
+  transition: 2s;
+}
+footer p .link:nth-child(1)::after{
+  content: "Lior Mazig";
+}
+footer p .link:nth-child(2)::after{
+  content: "Yizhak Gete";
+}
+footer p .link::before {
+  content: "\f08c";
+  /* f0e1 */
+  color: #03071e;
+  font-family: fontAwesome;
+  border: 15px;
+  font-size: 1.5em;
+  position: absolute;
+  background: #fff;
+  height: .9em;
+  width: .9em;
+  top: 0;
+  left: 40%;
+  transition: .7s;
+}
+
+footer p .link:hover::after{
+  color: #2867B2;
+ }
+footer p .link:hover::before {
+  color: #2867B2;
+  transform: rotate(-17deg);
+animation: upDownLink 1s forwards;
+}
+@keyframes upDownLink{
+  0%{
+top: 0;
+  }
+  50%{
+    top: -20px;
+  }
+  100%{
+    top: -4px;
+    z-index: 3;
+  }
+}
 /* ---------------- */
 
 @media screen and (max-width: 850px) {
@@ -397,7 +458,7 @@ footer .social li a i {
     flex-wrap: wrap;
     justify-content: center;
   }
- 
+
   #cont4 ul {
     margin: 40px 20px;
     width: fit-content;
@@ -488,7 +549,7 @@ footer .social li a i {
   .container .text {
     width: 80%;
   }
-  .container .text h1{
+  .container .text h1 {
     text-align: center;
     line-height: 35px;
   }
