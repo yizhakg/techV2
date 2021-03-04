@@ -1,4 +1,4 @@
-import { JOBS } from "./jobsList.js";//import jobs data
+import { JOBS } from "./jobsList.js"; //import jobs data
 console.log(JOBS);
 function toggleMenu() {
   if (window.innerWidth < 850) {
@@ -15,27 +15,41 @@ function toggleJob(id) {
   const jobInfo = JOBS[id[0]][id.substr(1)];
   //----------------rest div information -----------------
   document.getElementById("currentJobTitle").innerHTML = "";
-  document.getElementById("info1").querySelector("p").innerHTML = "";
-  document.getElementById("info2").querySelector("p").innerHTML = "";
-  document.getElementById("info3").querySelector("p").innerHTML = "";
-    //----------------scroll To The Top-----------------
-  jobsInfo.scrollTop=10; 
+  info1.querySelector("p").innerHTML = "";
+  info2.querySelector("p").innerHTML = "";
+  info3.querySelector("p").innerHTML = "";
+  //----------------scroll To The Top-----------------
+  jobsInfo.scrollTop = 10;
+
   //----------------add div information -----------------
   const { about, responsibilities, requirement } = jobInfo;
   document.getElementById("currentJobTitle").innerHTML = jobInfo.title;
-  document.getElementById("info1").querySelector("p").innerHTML = about;
-  document
-    .getElementById("info2")
-    .querySelector("p").innerHTML = responsibilities;
-  document.getElementById("info3").querySelector("p").innerHTML = requirement;
+  info1.querySelector("p").innerHTML = about;
+  info2.querySelector("p").innerHTML = responsibilities;
+  info3.querySelector("p").innerHTML = requirement;
   //----------------link href direction-----------------
-if(id[0]==0){
-  document.getElementById("applying").setAttribute('href','https://docs.google.com/forms/d/e/1FAIpQLSd7u4537CueSCDG56stO1L-bakXC82juhV5iGd26iKtk-uvxw/viewform?pli=1');
-}else{
-  document.getElementById("applying").setAttribute('href','https://docs.google.com/forms/d/e/1FAIpQLSe6XsvccU3dQZ6GwCejbXxS47CKJKwSslQy-eoBS5dhfScnrg/viewform?pli=1');
-}
+  if (id[0] == 0) {
+    document
+      .getElementById("applying")
+      .setAttribute(
+        "href",
+        "https://docs.google.com/forms/d/e/1FAIpQLSd7u4537CueSCDG56stO1L-bakXC82juhV5iGd26iKtk-uvxw/viewform?pli=1"
+      );
+    info2.querySelector("h3").innerHTML = "תחומי אחריות מרכזיים:";
+    jobsNavLi[1].innerHTML = "תחומי אחריות מרכזיים"
+  } else {
+    document
+      .getElementById("applying")
+      .setAttribute(
+        "href",
+        "https://docs.google.com/forms/d/e/1FAIpQLSe6XsvccU3dQZ6GwCejbXxS47CKJKwSslQy-eoBS5dhfScnrg/viewform?pli=1"
+      );
+    info2.querySelector("h3").innerHTML = "מהות התפקיד:";
+    jobsNavLi[1].innerHTML = "מהות התפקיד"
+  }
 }
 function changeInfoClass(num) {
+  const jobsNavChildrens = document.getElementById("jobsNav").children;
   for (let i = 0; i < jobsNavChildrens.length; i++) {
     jobsNavChildrens[i].classList.remove("active");
   }
@@ -62,7 +76,6 @@ window.onload = () => {
   cont4Li.forEach((item) => {
     item.addEventListener("click", () => toggleJob(item.id));
   });
-  const jobsNavLi = document.getElementById("jobsNav").querySelectorAll("li");
   jobsNavLi.forEach((item, index) => {
     item.addEventListener("click", () => navToInfo(index));
   });
@@ -82,6 +95,7 @@ window.onload = () => {
   });
 };
 const jobsInfo = document.getElementById("jobsInfo");
+const jobsNavLi = document.getElementById("jobsNav").querySelectorAll("li");
 const info1 = document.getElementById("info1");
 const info2 = document.getElementById("info2");
 const info3 = document.getElementById("info3");
@@ -92,14 +106,13 @@ jobsInfo.addEventListener("scroll", (e) => {
     applying.offsetTop - jobsInfo.offsetHeight - jobsHeader.offsetHeight;
 
   jobsInfo.scrollTop >= 0 &&
-    jobsInfo.scrollTop < info2.offsetTop - jobsHeader.offsetHeight-40 &&
+    jobsInfo.scrollTop < info2.offsetTop - jobsHeader.offsetHeight - 40 &&
     changeInfoClass(0);
-  jobsInfo.scrollTop >= info2.offsetTop - jobsHeader.offsetHeight-40 &&
-    jobsInfo.scrollTop < info3.offsetTop - jobsHeader.offsetHeight-40 &&
+  jobsInfo.scrollTop >= info2.offsetTop - jobsHeader.offsetHeight - 40 &&
+    jobsInfo.scrollTop < info3.offsetTop - jobsHeader.offsetHeight - 40 &&
     changeInfoClass(1);
-  jobsInfo.scrollTop >= info3.offsetTop - jobsHeader.offsetHeight-40 &&
+  jobsInfo.scrollTop >= info3.offsetTop - jobsHeader.offsetHeight - 40 &&
     jobsInfo.scrollTop < scrollMax &&
     changeInfoClass(2);
   jobsInfo.scrollTop >= scrollMax && changeInfoClass(3);
 });
-const jobsNavChildrens = document.getElementById("jobsNav").children;
