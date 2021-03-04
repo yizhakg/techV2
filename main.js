@@ -10,15 +10,17 @@ function toggleMenu() {
 }
 
 function toggleJob(id) {
+  
   const job = document.querySelector(".currentJob");
   job.classList.toggle("active");
-  changeInfoClass(0);
   const jobInfo = JOBS[id[0]][id.substr(1)];
   //----------------rest div information -----------------
   document.getElementById("currentJobTitle").innerHTML = "";
   document.getElementById("info1").querySelector("p").innerHTML = "";
   document.getElementById("info2").querySelector("p").innerHTML = "";
   document.getElementById("info3").querySelector("p").innerHTML = "";
+    //----------------scroll To The Top-----------------
+  jobsInfo.scrollTop=10; 
   //----------------add div information -----------------
   const { about, responsibilities, requirement } = jobInfo;
   document.getElementById("currentJobTitle").innerHTML = jobInfo.title;
@@ -27,6 +29,8 @@ function toggleJob(id) {
     .getElementById("info2")
     .querySelector("p").innerHTML = responsibilities;
   document.getElementById("info3").querySelector("p").innerHTML = requirement;
+  // changeInfoClass(0);
+
 }
 function changeInfoClass(num) {
   for (let i = 0; i < jobsNavChildrens.length; i++) {
