@@ -1,9 +1,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  --mainBlack: #343434;
+  --mainBlack: #343a40;
   --mainWhite: #fdfffc;
-  --headerColor: #343434;
+  --headerColor: #343a40;
 }
 * {
   margin: 0;
