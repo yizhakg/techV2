@@ -1,4 +1,4 @@
-import { JOBS } from "./data.js";
+import { JOBS } from "./data.js";//import jobs data
 console.log(JOBS);
 function toggleMenu() {
   if (window.innerWidth < 850) {
@@ -13,11 +13,13 @@ function toggleJob(id) {
   const job = document.querySelector(".currentJob");
   job.classList.toggle("active");
   changeInfoClass(0);
-  const jobInfo = JOBS[id[0]][id[1]];
+  const jobInfo = JOBS[id[0]][id.substr(1)];
+  //----------------rest div information -----------------
   document.getElementById("currentJobTitle").innerHTML = "";
   document.getElementById("info1").querySelector("p").innerHTML = "";
   document.getElementById("info2").querySelector("p").innerHTML = "";
   document.getElementById("info3").querySelector("p").innerHTML = "";
+  //----------------add div information -----------------
   const { about, responsibilities, requirement } = jobInfo;
   document.getElementById("currentJobTitle").innerHTML = jobInfo.title;
   document.getElementById("info1").querySelector("p").innerHTML = about;
