@@ -1,4 +1,4 @@
-import { JOBS } from "./data.js";//import jobs data
+import { JOBS } from "./jobsList.js";//import jobs data
 console.log(JOBS);
 function toggleMenu() {
   if (window.innerWidth < 850) {
