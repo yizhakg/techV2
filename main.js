@@ -10,7 +10,6 @@ function toggleMenu() {
 }
 
 function toggleJob(id) {
-  
   const job = document.querySelector(".currentJob");
   job.classList.toggle("active");
   const jobInfo = JOBS[id[0]][id.substr(1)];
@@ -29,8 +28,12 @@ function toggleJob(id) {
     .getElementById("info2")
     .querySelector("p").innerHTML = responsibilities;
   document.getElementById("info3").querySelector("p").innerHTML = requirement;
-  // changeInfoClass(0);
-
+  //----------------link href direction-----------------
+if(id[0]==0){
+  document.getElementById("applying").setAttribute('href','https://docs.google.com/forms/d/e/1FAIpQLSd7u4537CueSCDG56stO1L-bakXC82juhV5iGd26iKtk-uvxw/viewform?pli=1');
+}else{
+  document.getElementById("applying").setAttribute('href','https://docs.google.com/forms/d/e/1FAIpQLSe6XsvccU3dQZ6GwCejbXxS47CKJKwSslQy-eoBS5dhfScnrg/viewform?pli=1');
+}
 }
 function changeInfoClass(num) {
   for (let i = 0; i < jobsNavChildrens.length; i++) {

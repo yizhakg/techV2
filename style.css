@@ -335,6 +335,7 @@ main {
   display: block;
   height: fit-content;
   width: fit-content;
+  text-decoration: none;
   padding: 5px 10px;
   margin-top: 20px;
   font-size: 1.5em;
