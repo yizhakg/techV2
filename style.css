@@ -19,7 +19,7 @@ body {
   color: var(--mainBlack);
 }
 a {
-  pointer-events: visible;
+  text-decoration: none;
 }
 nav {
   position: sticky;
@@ -90,7 +90,6 @@ nav .navUl li a {
   display: block;
   padding: 15px 30px;
   font-size: 20px;
-  text-decoration: none;
   transition: 0.5s;
 }
 nav .navUl li:hover a {
@@ -334,7 +333,6 @@ main {
   display: block;
   height: fit-content;
   width: fit-content;
-  text-decoration: none;
   padding: 5px 10px;
   margin-top: 20px;
   font-size: 1.5em;
@@ -396,28 +394,10 @@ footer .social li a i {
 footer .copyright .link {
   display: inline-flex;
  position: relative;
-  color: #fff;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
 }
-footer .copyright .link::after{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: fit-content;
-  margin: 0;
-  padding: 0;
-  color: #03071e;
-  background: #fff;
-  font-size: inherit;
-  height: 40px;
-  z-index: 1;
-  transition: 2s;
-}
-footer .copyright .link:nth-child(1)::after{
-  content: "Lior Mazig";
-}
-footer .copyright .link:nth-child(2)::after{
-  content: "Yizhak Gete";
-}
+
 footer .copyright .link::before {
   content: "\f08c";
   /* f0e1 */
@@ -432,9 +412,9 @@ footer .copyright .link::before {
   top: 0;
   left: 40%;
   transition: .7s;
+  z-index: -1;
 }
-
-footer .copyright .link:hover::after{
+footer .copyright .link:hover{
   color: #2867B2;
  }
 footer .copyright .link:hover::before {
