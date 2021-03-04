@@ -363,7 +363,7 @@ footer {
   margin: 100px 0 50px 0;
   background-color: var(--mainWhite);
 }
-footer p {
+footer .copyright {
   border-top: 2px solid;
   width: fit-content;
   padding: 10px 0;
@@ -394,11 +394,11 @@ footer .social li a i {
   color: #4267b2;
 }
 
-footer p .link {
+footer .copyright .link {
  position: relative;
   color: #fff;
 }
-footer p .link::after{
+footer .copyright .link::after{
   position: absolute;
   top: 0;
   left: 0;
@@ -408,13 +408,13 @@ footer p .link::after{
   z-index: 1;
   transition: 2s;
 }
-footer p .link:nth-child(1)::after{
+footer .copyright .link:nth-child(1)::after{
   content: "Lior Mazig";
 }
-footer p .link:nth-child(2)::after{
+footer .copyright .link:nth-child(2)::after{
   content: "Yizhak Gete";
 }
-footer p .link::before {
+footer .copyright .link::before {
   content: "\f08c";
   /* f0e1 */
   color: #03071e;
@@ -430,10 +430,10 @@ footer p .link::before {
   transition: .7s;
 }
 
-footer p .link:hover::after{
+footer .copyright .link:hover::after{
   color: #2867B2;
  }
-footer p .link:hover::before {
+footer .copyright .link:hover::before {
   color: #2867B2;
   transform: rotate(-17deg);
 animation: upDownLink 1s forwards ; 
@@ -460,49 +460,49 @@ top: 0;
   background: transparent;
 }
 .swiper-slide:nth-child(1) {
-  background: url("./img/swiper/1.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/1.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(2) {
-  background: url("./img/swiper/2.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/2.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(3) {
-  background: url("./img/swiper/3.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/3.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(4) {
-  background: url("./img/swiper/4.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/4.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(5) {
-  background: url("./img/swiper/5.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/5.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(6) {
-  background: url("./img/swiper/6.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/6.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(7) {
-  background: url("./img/swiper/7.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/7.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(8) {
-  background: url("./img/swiper/8.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/8.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
