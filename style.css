@@ -396,6 +396,7 @@ footer .copyright .link {
  position: relative;
   color: var(--mainBlack);
   background: var(--mainWhite);
+  transition: 1s;
 }
 
 footer .copyright .link::before {
