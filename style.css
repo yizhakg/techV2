@@ -507,6 +507,7 @@ top: 0;
   }
   #cont4 {
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
 
