@@ -1,7 +1,7 @@
 import { JOBS } from "./jobsList.js"; //import jobs data
 console.log(JOBS);
 function toggleMenu() {
-  if (window.innerWidth < 850) {
+  if (window.innerWidth < 865) {
     let navUl = document.querySelector(".navUl");
     let toggle = document.querySelector(".toggle");
     navUl.classList.toggle("active");
