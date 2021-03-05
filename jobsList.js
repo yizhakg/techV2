@@ -431,8 +431,8 @@ const TECH = [
 - Classes and Objects<br />
 - Overloading functions and operators<br />
 - Polymorphic Programming <br />
-- Code Reuse in C++<br />
-- Designing with C++<br />
+- ++Code Reuse in C<br />
+- ++Designing with C<br />
 - Data structure <br />
 - Testing & Debugging & Engineering practices <br />
 - Introduction Embedded software <br />
