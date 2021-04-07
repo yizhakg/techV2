@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"); */
+
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --mainBlack: #343a40;
@@ -10,7 +10,6 @@
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
-  /* font-family: "Rubik", sans-serif; */
   font-family: "Heebo", sans-serif;
   color: var(--mainBlack);
   scroll-behavior: smooth;
@@ -431,7 +430,6 @@ footer .copyright .link {
 
 footer .copyright .link::before {
   content: "\f08c";
-  /* f0e1 */
   color: #03071e;
   font-family: fontAwesome;
   border: 15px;
