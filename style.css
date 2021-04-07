@@ -238,11 +238,14 @@ main {
   width: 200px;
   align-self: center;
 }
-#cont4 ul .active {
+#cont4 ul .notActive {
   cursor: unset;
   color: rgb(177, 177, 177);
 }
-#cont4 ul .active:hover {
+#cont4 ul .notActive::before {
+  content:'משרה לא פעילה',
+}
+#cont4 ul .notActive:hover {
   background: unset;
   color: rgb(177, 177, 177);
   transform: unset;
@@ -497,6 +500,12 @@ footer .copyright .link:hover::before {
 }
 .swiper-slide:nth-child(8) {
   background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/8.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(9) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/9.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
