@@ -101,7 +101,7 @@ window.onload = () => {
   const swiperDivs = document.querySelectorAll(".swiper-slide");
   swiperDivs.forEach((swiper, index) => {
     swiper.style = `
-      background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/${++index}.jpeg");
+      background-image: url(https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/${++index}.jpeg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
