@@ -239,11 +239,27 @@ main {
   align-self: center;
 }
 #cont4 ul .notActive {
+  position: relative;
   cursor: unset;
+  color: rgb(177, 177, 177);
+  overflow: hidden;
+}
+#cont4 ul .notActive i{
   color: rgb(177, 177, 177);
 }
 #cont4 ul .notActive::before {
-  content:'משרה לא פעילה',
+  content:'משרה לא זמינה';
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width:100%;
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  text-align:center;
+  transition: .5s;
+}
+#cont4 ul .notActive:hover::before {
+  top: 0px;
 }
 #cont4 ul .notActive:hover {
   background: unset;
@@ -481,7 +497,7 @@ footer .copyright .link:hover::before {
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(5) {
-  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/5.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/9.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -505,7 +521,7 @@ footer .copyright .link:hover::before {
   background-repeat: no-repeat;
 }
 .swiper-slide:nth-child(9) {
-  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/9.jpeg");
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/5.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
