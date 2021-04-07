@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --mainBlack: #343a40;
   --mainWhite: #fdfffc;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   direction: rtl;
   /* font-family: "Rubik", sans-serif; */
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
   color: var(--mainBlack);
   scroll-behavior: smooth;
 }
@@ -238,7 +238,15 @@ main {
   width: 200px;
   align-self: center;
 }
-
+#cont4 ul .active {
+  cursor: unset;
+  color: rgb(177, 177, 177);
+}
+#cont4 ul .active:hover {
+  background: unset;
+  color: rgb(177, 177, 177);
+  transform: unset;
+}
 /* ---------------- */
 .currentJob {
   display: none;
@@ -365,7 +373,7 @@ footer .copyright {
   border-top: 2px solid;
   width: fit-content;
   padding: 10px 0;
-    direction: ltr;
+  direction: ltr;
 }
 footer img {
   height: 50px;
@@ -394,7 +402,7 @@ footer .social li a i {
 
 footer .copyright .link {
   display: inline-flex;
- position: relative;
+  position: relative;
   color: var(--mainBlack);
   background: var(--mainWhite);
   transition: 1s;
@@ -409,29 +417,29 @@ footer .copyright .link::before {
   font-size: 1.5em;
   position: absolute;
   background: #fff;
-  height: .9em;
-  width: .9em;
+  height: 0.9em;
+  width: 0.9em;
   top: 0;
   left: 40%;
-  transition: .7s;
+  transition: 0.7s;
   z-index: -1;
 }
-footer .copyright .link:hover{
-  color: #2867B2;
- }
-footer .copyright .link:hover::before {
-  color: #2867B2;
-  transform: rotate(-17deg);
-animation: upDownLink 1s forwards ; 
+footer .copyright .link:hover {
+  color: #2867b2;
 }
-@keyframes upDownLink{
-  0%{
-top: 0;
+footer .copyright .link:hover::before {
+  color: #2867b2;
+  transform: rotate(-17deg);
+  animation: upDownLink 1s forwards;
+}
+@keyframes upDownLink {
+  0% {
+    top: 0;
   }
-  50%{
+  50% {
     top: -35px;
   }
-  100%{
+  100% {
     top: -23px;
     z-index: 3;
   }
@@ -493,7 +501,9 @@ top: 0;
   background-position: center;
   background-repeat: no-repeat;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
   background: #000;
 }
 /* ---------------------- */
@@ -610,7 +620,7 @@ top: 0;
     transform: translateY(30px);
     padding: 20px;
   }
-  .swiper-container{
+  .swiper-container {
     height: 40vh;
     width: 90vw;
   }

@@ -74,9 +74,11 @@ function navToInfo(num) {
 window.onload = () => {
   const cont4Li = document.getElementById("cont4").querySelectorAll("li");
   cont4Li.forEach((item) => {
+    (item.className!=="active")&&
     item.addEventListener("click", () => toggleJob(item.id));
   });
   jobsNavLi.forEach((item, index) => {
+    (item.className!=="active")&&
     item.addEventListener("click", () => navToInfo(index));
   });
   const close = document
