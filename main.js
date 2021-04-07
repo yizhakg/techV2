@@ -97,9 +97,15 @@ window.onload = () => {
   navUlLi.forEach((item) => {
     item.addEventListener("click", toggleMenu);
   });
+
   document.querySelector(".nav a").addEventListener("click", () => {
-    scrollToDiv(`header`);
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   });
+  document.querySelector(".downArw").addEventListener("click", () => {
+    scrollToDiv(`cont1`);
+  });
+
   const menuLink = document.querySelectorAll("#navUl a");
   menuLink.forEach((link, index) => {
     index++;
