@@ -1,5 +1,4 @@
 import { JOBS } from "./jobsList.js"; //import jobs data
-console.log(JOBS);
 function toggleMenu() {
   if (window.innerWidth < 865) {
     let navUl = document.querySelector(".navUl");
@@ -36,7 +35,7 @@ function toggleJob(id) {
         "https://docs.google.com/forms/d/e/1FAIpQLSd7u4537CueSCDG56stO1L-bakXC82juhV5iGd26iKtk-uvxw/viewform?pli=1"
       );
     info2.querySelector("h3").innerHTML = "תחומי אחריות מרכזיים:";
-    jobsNavLi[1].innerHTML = "תחומי אחריות מרכזיים"
+    jobsNavLi[1].innerHTML = "תחומי אחריות מרכזיים";
   } else {
     document
       .getElementById("applying")
@@ -45,7 +44,7 @@ function toggleJob(id) {
         "https://docs.google.com/forms/d/e/1FAIpQLSe6XsvccU3dQZ6GwCejbXxS47CKJKwSslQy-eoBS5dhfScnrg/viewform?pli=1"
       );
     info2.querySelector("h3").innerHTML = "מהות התפקיד:";
-    jobsNavLi[1].innerHTML = "מהות התפקיד"
+    jobsNavLi[1].innerHTML = "מהות התפקיד";
   }
 }
 function changeInfoClass(num) {
@@ -74,12 +73,12 @@ function navToInfo(num) {
 window.onload = () => {
   const cont4Li = document.getElementById("cont4").querySelectorAll("li");
   cont4Li.forEach((item) => {
-    (item.className!=="notActive")&&
-    item.addEventListener("click", () => toggleJob(item.id));
+    item.className !== "notActive" &&
+      item.addEventListener("click", () => toggleJob(item.id));
   });
   jobsNavLi.forEach((item, index) => {
-    (item.className!=="notActive")&&
-    item.addEventListener("click", () => navToInfo(index));
+    item.className !== "notActive" &&
+      item.addEventListener("click", () => navToInfo(index));
   });
   const close = document
     .getElementById("close")
@@ -94,6 +93,16 @@ window.onload = () => {
   const navUlLi = document.getElementById("navUl").querySelectorAll("li");
   navUlLi.forEach((item) => {
     item.addEventListener("click", toggleMenu);
+  });
+
+  const swiperDivs = document.querySelectorAll(".swiper-slide");
+  swiperDivs.forEach((swiper, index) => {
+    swiper.style=`
+      background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/${++index}.jpeg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+ `
   });
 };
 const jobsInfo = document.getElementById("jobsInfo");
