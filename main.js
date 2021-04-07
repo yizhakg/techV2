@@ -7,7 +7,10 @@ function toggleMenu() {
     toggle.classList.toggle("active");
   }
 }
-
+function scrollToDiv(id) {
+  const elmnt = document.getElementById(id);
+  elmnt.scrollIntoView();
+}
 function toggleJob(id) {
   const job = document.querySelector(".currentJob");
   job.classList.toggle("active");
@@ -97,12 +100,22 @@ window.onload = () => {
 
   const swiperDivs = document.querySelectorAll(".swiper-slide");
   swiperDivs.forEach((swiper, index) => {
-    swiper.style=`
+    swiper.style = `
       background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/${++index}.jpeg");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
- `
+ `;
+  });
+  document.querySelector(".nav a").addEventListener("click", () => {
+    scrollToDiv(`header`);
+  });
+  const menuLink = document.querySelectorAll("#navUl a");
+  menuLink.forEach((link, index) => {
+    index++;
+    link.addEventListener("click", () => {
+      scrollToDiv(`cont${index}`);
+    });
   });
 };
 const jobsInfo = document.getElementById("jobsInfo");
