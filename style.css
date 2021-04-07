@@ -226,6 +226,7 @@ main {
   transition: 0.5s;
   margin-right: 10px;
   line-height: 50px;
+  padding-left: 25px;
 }
 #cont4 ul li:hover {
   background: var(--mainBlack);
