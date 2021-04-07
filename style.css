@@ -249,7 +249,7 @@ main {
   color: rgb(177, 177, 177);
 }
 #cont4 ul .notActive::before {
-  content:'משרה לא זמינה';
+  content:'המשרה אויישה !';
   position: absolute;
   top: 50px;
   left: 0;
