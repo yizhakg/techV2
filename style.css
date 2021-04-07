@@ -465,11 +465,14 @@ footer .copyright .link:hover::before {
 }
 /* --------swiper-------- */
 .swiper-container {
-  width: 570px;
+  width: 500px;
   height: 350px;
   margin: 20px;
   border-radius: 5px;
   background: transparent;
+}
+.swiper-slide{
+  width: 100%;
 }
 
 .swiper-container-horizontal
