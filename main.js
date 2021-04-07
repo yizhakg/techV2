@@ -97,16 +97,6 @@ window.onload = () => {
   navUlLi.forEach((item) => {
     item.addEventListener("click", toggleMenu);
   });
-
-  const swiperDivs = document.querySelectorAll(".swiper-slide");
-  swiperDivs.forEach((swiper, index) => {
-    swiper.style = `
-      background-image: url(https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/${++index}.jpeg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
- `;
-  });
   document.querySelector(".nav a").addEventListener("click", () => {
     scrollToDiv(`header`);
   });

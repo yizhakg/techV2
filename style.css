@@ -471,8 +471,59 @@ footer .copyright .link:hover::before {
   border-radius: 5px;
   background: transparent;
 }
-.swiper-slide{
-  width: 100%;
+.swiper-slide:nth-child(1) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/1.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(2) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/2.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(3) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/3.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(4) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/4.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(5) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/9.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(6) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/6.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(7) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/7.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(8) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/8.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide:nth-child(9) {
+  background: url("https://raw.githubusercontent.com/yizhakg/techV2/main/Img/swiper/5.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .swiper-container-horizontal
